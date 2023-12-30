@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async 1 Project</title>
+</head>
+<body>
+    <h1>Async 1 Project</h1>
+    <button type="button" id="stop">Stop</button>
+</body>
+<script>
+    console.log("Async 1 Project")
+    const func=function() {
+        document.querySelector('h1').innerHTML = "Jayant and Code"
+        console.log("Jayant and Code")
+    }
+    const timeOut=setTimeout(func,2000)
+
+    document.getElementById('stop').addEventListener('click',function(){
+        console.log("Clear Timeout")
+        clearTimeout(timeOut)
+    })
+
+    //setInterval   
+    const funcInterval=function(str){
+        console.log(str,Date.now())
+    }
+    const Id=setInterval(funcInterval,2000,"hi")
+    document.getElementById('stopINT').addEventListener('click',function(){
+        clearInterval(Id)
+    })
+</script>
+</html>

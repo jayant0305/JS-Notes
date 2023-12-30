@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <button type="button" class="btn btn-primary" onclick="alert('Events-1')">Events-1</button>
+    <!-- Event 1 is not scalable -->
+    <button type="button" id="Event2" class="btn btn-primary">Events-2</button>
+    <!-- Event 2 me onclick ki DIKKAT -->
+    <button type="button" id="Event3" class="btn btn-primary">Events-3</button>
+
+    <ul id="ul">
+        <li>List 1</li>
+        <li>List 2</li>
+        <li>List 3</li>
+    </ul>
+</body>
+<script>
+    document.getElementById("Event2").onclick=function(){
+        return alert('Events-2');
+    };
+    document.getElementById("Event3").addEventListener("click",function(e){
+        console.log(e)
+        //e contains BROWSER AND ENVIRONMENT Events 
+
+
+        e.stopPropagation()
+
+    },false);
+
+    //WHAT SHOULD YOU LEARN
+    // FALSE (3rd PARA) is event propagation
+    //false means event bubbling (bottom to top)
+    //true means event capturing (top to bottom)
+    // e.STOP PROAPAGATION()
+    <!-- 1. type , timestamp , defaultPrevented 
+    2. target,toElement, srcElement,currentTarget 
+    3. clientX,clientY, screenX,screenY
+    4. altKey,crtlKey, shiftKey, keyCode-->
+    
+
+
+
+    document.getElementById("ul").addEventListener("click",function(e){
+        const target = e.target;
+        //target.parentNode.remove()
+
+        //USE TAGNAME
+        const tagName =e.target.tagName;
+        if(tagName === "IMG"){
+            const parent=tagName.parentNode;
+            parent.remove()
+        }
+    })  
+</script>
+</html>

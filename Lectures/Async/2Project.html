@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            display: inline-block;
+            background-color: #7b38d8;
+            padding: 40px;
+            width: 200px;
+            color: #ffffff;
+            font-size: 30px;
+            text-align: center;
+            margin-top: 200px;
+            border-radius: 40px ;
+        }
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <button id="Start">Start</button>
+    <button id="Stop">Stop</button>
+</body>
+<script>
+    var setId;
+    var boolean=true;
+    document.getElementById("Start").addEventListener("click",function(){
+        const bg=function (){
+            const s="0123456789ABCDEF"
+            let bgString="#"
+            for(let i=0;i<6;i++){
+                bgString+=s[Math.floor(Math.random()*(16))]
+            }
+            console.log(bgString)
+            document.body.style.backgroundColor=bgString
+            return;
+        }
+
+        if(boolean){
+            setId=setInterval(bg,1000)
+            boolean=false
+        }
+        
+    })
+    document.getElementById("Stop").addEventListener("click",function(){
+        if(!boolean){
+            clearInterval(setId)
+            boolean=true
+        }
+        
+    })
+</script>
+</html>
