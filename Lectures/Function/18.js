@@ -26,3 +26,11 @@ function myName(username="Jay"){ //==> defining default username
 
 console.log(myName())
 
+function addTwoNumber(num1){
+    return function add(num2){
+        return num1 + num2;
+    }
+}
+console.log(addTwoNumber(2)(3));
+const addTwo=addTwoNumber(2);
+addTwo(3);

@@ -24,7 +24,8 @@ let objectTwo={
 
 }
 let objectThree=Object.assign(objectOne,objectTwo)
-console.log(objectOne)
+console.log(objectOne) 
+console.log(objectOne === objectThree)
 let objectFour=Object.assign({},objectOne,objectTwo)
 
 

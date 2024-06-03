@@ -1,4 +1,4 @@
-//For Each Loops
+//For Each Loops -> takes a callback function
 const array=[1,2,3,4,5,6,7,8,9,10]
 array.forEach(function(item){ 
     console.log("using function keyword",item)

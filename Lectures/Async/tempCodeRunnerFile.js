@@ -1,4 +1,4 @@
-/*
+    /*
 Javascript => single threaded and synchronous language
 
 Function of code

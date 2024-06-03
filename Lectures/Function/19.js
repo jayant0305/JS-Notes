@@ -35,7 +35,7 @@ handleObject({
 
 
 /********* Passing Arrays ******** */
-function handleArray(arr){
+function handleArray(arr){ // Pass by reference
     return arr[0]
 }
 

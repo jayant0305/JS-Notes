@@ -23,3 +23,24 @@ One()
 const Two=function(variable){
     return variable
 }
+
+
+
+/******************** Block Scope **************/
+var a=100
+{
+    var a=10
+}
+
+// this changes a to 10 [ Shadowing ]
+
+// illegal shadowing
+let a=10
+{
+    var a=10
+}
+//  OR
+const a=10
+{
+    var a=10
+}

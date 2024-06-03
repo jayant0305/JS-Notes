@@ -1,4 +1,4 @@
-/********** Arraow Function and this Keyword **************/
+/********** Arrow Function and this Keyword **************/
 const user={
     name:"Jayant",
     age:23,

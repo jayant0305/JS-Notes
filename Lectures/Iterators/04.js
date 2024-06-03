@@ -8,7 +8,7 @@ console.log("Array Result through forEach",arrResult)
 
 //forEach not return anything
 //that's way filter is used
-const arrResult2=arr.filter((item)=>item>=5)
+const arrResult2=arr.filter((item)=>item>=5)  // no use of "{}"
 console.log(arrResult2)
 
 

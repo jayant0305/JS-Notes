@@ -1,7 +1,7 @@
 /* ------------------------ARRAYS IN JS------------------------- */
 
 // Arrays may and may not contain different data types elements
-// copy generated in array is shallow copying
+// copy generated in array is shallow copying [when we use assignment operators]
 
 let array = new Array(1,2,3,4,5,6,7,8)
 let array2 = [1,2,3,4,5,6,7,8]
@@ -13,8 +13,10 @@ console.log(array)
 array.pop()
 console.log(array)
 
+array.unshift(10) // add 10 at start
+array.shift() //==>remove first element
 
-//array.shift(10) ==>add it to first place (time consuming)
+
 array.includes(9)
 
 let newArray=array.join() //==> the tyoe is now changed to string
@@ -37,8 +39,10 @@ console.log(array)
 /*--------------------------------------- */
 let arrayOne=["plus", "minus", "multiply"]
 let arrayTwo=["divide", "modulo"]
-// arrayOne.push(arrayTwo)
-console.log(arrayOne) //==>  ['plus', 'minus', 'multiply', [ 'divide', 'modulo' ] ]4
+
+arrayOne.push(arrayTwo)
+console.log(arrayOne) //==>  ['plus', 'minus', 'multiply', [ 'divide', 'modulo' ] ]
+
 let concatArray=arrayOne.concat(arrayTwo)
 console.log(concatArray) //==> ['plus', 'minus', 'multiply, 'divide', 'modulo]
 

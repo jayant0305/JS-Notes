@@ -18,3 +18,5 @@ setTimeout(function(){
 },0)
 console.log("3");
 //OUTPUT - 1 3 2
+
+

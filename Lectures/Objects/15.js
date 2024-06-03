@@ -10,7 +10,6 @@ console.log(varObject1.name)
 //UNIQUE method to access
 console.log(varObject1["name"])
 
-
 // declaring symbols in the object
 let varSymbol=new Symbol()
 let object={
@@ -20,6 +19,7 @@ let object={
     "type":"Human",
     [varSymbol]:"key"
 }
+console.log(object[varSymbol]);
 
 //FREZZE
 // Object.freeze(object)

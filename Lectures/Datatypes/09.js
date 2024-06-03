@@ -3,8 +3,8 @@
 /* Primitive
 1. Number
 2. String
-3. NUll
-4. Undefine
+3. Null
+4. Undefined
 5. Symbol
 6. BigInt
 7. Boolean

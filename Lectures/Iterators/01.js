@@ -14,7 +14,7 @@ for (let i = 0; i <3;i++) {
 //For of Loops
 let arr=[1,2,3,4,5,6,7,8,9]
 
-for (let value of object) { //here object refers to array,String,Object
+for (let value of arr) { //here object refers to array,String,Object
     
 }
 
@@ -38,6 +38,6 @@ const objects = {
 }
 
 //USE For In Loop
-for (const key in object) {
-    console.log(key)
+for (const key in objects) {
+    console.log(objects[key])
 }
